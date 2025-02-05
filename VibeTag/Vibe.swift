@@ -25,7 +25,17 @@ struct Bar: Identifiable {
     var description: String
     var imageName: String
     var category: Vibes
+    var photoLocation: String
+    
+    init(name: String, description: String, imageName: String, category: Vibes) {
+        self.name = name
+        self.description = description
+        self.imageName = imageName
+        self.category = category
+        self.photoLocation = imageName 
+    }
 }
+
 
 
 struct VibesData {

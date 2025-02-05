@@ -19,20 +19,23 @@ struct VibeDetailView: View {
                 Spacer()
                 LazyVGrid(columns: columns) {
                     ForEach(VibesData.vibes[vibe] ?? []) { bar in
-                        VStack {
-                            Image(bar.imageName)
-                                .resizable()
-                                .frame(width: 80, height: 80)
-                            Text(bar.name)
-                                .font(.headline)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                            Text(bar.description)
-                                .font(.caption)
-                                .lineLimit(2)
-                                .frame(maxWidth: .infinity, alignment: .center)
+                        NavigationLink(destination: Text("Detail")) {
+                            VStack {
+                                Image(bar.imageName)
+                                    .resizable()
+                                    .frame(width: 80, height: 80)
+                                Text(bar.name)
+                                    .foregroundStyle(.black)
+                                    .font(.headline)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                Text(bar.description)
+                                    .font(.caption)
+                                    .foregroundStyle(.black)
+                                    .lineLimit(2)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                         }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                        
                     }
                     .padding()
                 }
