@@ -9,15 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List(Vibes.allCases, id: \.self) { vibe in
+                NavigationLink(destination: VibeDetailView(vibe: vibe)) {
+                    Text(vibe.rawValue)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .navigationBarTitle("VibeMenu")
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()
