@@ -19,7 +19,7 @@ struct VibeDetailView: View {
                 Spacer()
                 LazyVGrid(columns: columns) {
                     ForEach(VibesData.vibes[vibe] ?? []) { bar in
-                        NavigationLink(destination: CameraView(bar: bar)) {
+                        NavigationLink(destination: BarImageView(bar: bar)) {
                             VStack {
                                 Image(bar.imageName)
                                     .resizable()

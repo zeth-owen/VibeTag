@@ -1,14 +1,13 @@
 //
-//  CameraView.swift
+//  BarImageView.swift
 //  VibeTag
 //
-//  Created by Zeth Thomas on 2/4/25.
+//  Created by Zeth Thomas on 2/25/25.
 //
 
 import SwiftUI
 
-struct CameraView: View {
-    
+struct BarImageView: View {
     let bar: Bar
     
     var body: some View {
@@ -33,5 +32,5 @@ struct CameraView: View {
 }
 
 #Preview {
-    CameraView(bar: Bar(name: "Piranha Nightclub", description: "A popular LGBTQ+ nightclub with drag shows.", imageName: "Piranha", category: .lgbtqBars))
+    BarImageView(bar: Bar(name: "Piranha Nightclub", description: "A popular LGBTQ+ nightclub with drag shows.", imageName: "Piranha", category: .lgbtqBars))
 }
