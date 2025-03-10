@@ -11,9 +11,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                Text("Profile View")
-                    .font(.largeTitle)
-                    .padding()
+                ProfileView()
             }
             .tabItem {
                 Label("Profile", systemImage: "person.circle.fill")
