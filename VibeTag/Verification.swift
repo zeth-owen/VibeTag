@@ -5,8 +5,9 @@
 //  Created by Zeth Thomas on 3/8/25.
 //
 
+import SwiftUI
 import Vision
-import UIKit
+
 
 func extractTextFromImage(_ image: UIImage, completion: @escaping (String?) -> Void) {
     guard let cgImage = image.cgImage else {
@@ -49,3 +50,5 @@ func containsHashtag(_ text: String) -> Bool {
 func containsBarName(_ text: String, barName: String) -> Bool {
     return text.contains(barName)
 }
+
+
